@@ -89,13 +89,13 @@ int main() {
         printf("4. Exit the code\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        getchar(); // Consume the newline character left in the input buffer
+        getchar(); 
         switch (choice) {
             case 1:
                 printf("Enter the URL to add: ");
                 fgets(page, sizeof(page), stdin);  //Reads character until newline is encountered
                 page[strcspn(page, "\n")] = '\0'; // Remove the trailing newline character
-                addPage(&webHistory, page);   //Taking address of pointer so we use double pointer **
+                addPage(&webHistory, page);  
                 break;
             case 2:
                 printf("Enter the URL to remove: ");
